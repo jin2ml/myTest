@@ -33,9 +33,6 @@ public class HeartBeatServer {
      */
     private static final int READ_WAIT_SECONDS = 10;
 
-    private static final TimeUnit TIME_UNIT = TimeUnit.SECONDS;
-
-
     private void startServer() {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -84,7 +81,7 @@ public class HeartBeatServer {
              * 这里只监听读操作
              * 可以根据需求，监听写操作和总得操作
              */
-            pipeline.addLast("pong", new IdleStateHandler(READ_WAIT_SECONDS, 0, 0, TIME_UNIT));
+            pipeline.addLast("pong", new IdleStateHandler(READ_WAIT_SECONDS, 0, 0, TimeUnit.SECONDS));
 
             pipeline.addLast("handler", new HeartbeatHandler());
         }
