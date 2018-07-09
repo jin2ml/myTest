@@ -17,6 +17,12 @@ public class ServerHandler extends SimpleChannelInboundHandler<String>{
         System.out.println(s);
         //回写给客户端
         ctx.channel().writeAndFlush("receive");
+        ctx.writeAndFlush("receive");
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        System.out.println("error" + cause.toString());
     }
 
     @Override
