@@ -1,4 +1,4 @@
-package com.jin2ml.nettytest.server;
+package com.jin2ml.netty.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;

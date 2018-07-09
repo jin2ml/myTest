@@ -1,6 +1,5 @@
-package com.jin2ml.nettytest.client;
+package com.jin2ml.netty.client;
 
-import com.jin2ml.nettytest.server.ServerHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;

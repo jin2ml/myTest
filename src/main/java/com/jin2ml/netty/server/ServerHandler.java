@@ -1,4 +1,4 @@
-package com.jin2ml.nettytest.server;
+package com.jin2ml.netty.server;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPromise;

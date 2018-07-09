@@ -1,4 +1,4 @@
-package com.jin2ml.nettytest.client;
+package com.jin2ml.netty.client;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
