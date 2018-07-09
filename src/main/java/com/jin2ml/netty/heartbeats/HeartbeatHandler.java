@@ -74,7 +74,7 @@ class HeartbeatHandler extends SimpleChannelInboundHandler<String> {
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         System.out.println("错误原因：" + cause.getMessage());
-//        ctx.channel().close();
+        ctx.channel().close();
         setUserOnlineStatus(userid, false);
     }
 
